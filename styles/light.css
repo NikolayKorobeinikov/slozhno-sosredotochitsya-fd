@@ -10,16 +10,45 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 :root.theme-light {
-  --bg-page-color: rgba(255, 241, 247, 1);
-  --color-text-light: rgba(53, 52, 48, 1);
-  --color-title-light: rgba(53, 52, 48, 1);
-  --bg-color-title-light: rgba(255, 141, 203, 1);
-  --main-title-color: rgba(255, 194, 230, 1);
-  --text-shadow: var(--bg-color-title-light);
+  --background-image: url(../images/cover-image-light.png);
+  --background-color: rgba(255, 241, 247, 1);
+  --text-color: rgba(53, 52, 48, 1);
+  --heading-color: rgba(53, 52, 48, 1);
+  --accent-color: rgba(255, 141, 203, 1);
+  --highlighted-title-color: rgba(255, 194, 230, 1);
+  --text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 
 /* Вам также нужно будет написать ряд подобных селекторов */
-.theme-light .page {
-  background-color: var(--bg-page-color), rgba(255, 241, 247, 1);
+
+/* .theme-light .page {
+  background-color: var(--background-color), rgba(255, 241, 247, 1);
+} */
+
+.header {
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.decoration {
+  color: var(--accent-color);
+}
+
+.decoration::after {
+  display: none;
+}
+
+.header__title {
+  text-shadow: var(--accent-color);
+}
+
+.block__title {
+  background-color: var(--accent-color);
+  color: var(--heading-color);
+}
+
+.section__title {
+  color: var(--heading-color);
 }

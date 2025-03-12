@@ -8,4 +8,6 @@
   --line-height-base: 23.4px;
   --fw-normal: 400;
   --fw-bold: 700;
+  --text-lowercase: lowercase;
+  --text-uppercase: uppercase;
 }
