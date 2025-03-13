@@ -37,7 +37,7 @@
 }
 
 .header__title {
-  text-shadow: var(--accent-color);
+  /* text-shadow: var(--accent-color); */
 }
 
 .block__title {
@@ -47,4 +47,13 @@
 
 .section__title {
   color: var(--accent-color);
+}
+
+.section__block-title {
+  background-color: var(--accent-color);
+  color: var(--heading-color);
+}
+
+.section__block-text {
+  color: var(--text-color);
 }
