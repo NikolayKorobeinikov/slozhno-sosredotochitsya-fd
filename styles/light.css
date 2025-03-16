@@ -42,20 +42,17 @@
     height: 25px;
     border-right: 1px solid var(--text-color);
     border-top: 1px solid var(--text-color);
-    position: absolute;
   }
 
   .theme-light header::after,
   .theme-light footer::after {
     content: "";
     position: absolute;
-    bottom: px;
     bottom: 20px;
     left: 20px;
     height: 25px;
     border-left: 1px solid var(--text-color);
     border-bottom: 1px solid var(--text-color);
-    position: absolute;
   }
 
   .theme-light .decoration {

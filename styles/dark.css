@@ -36,7 +36,6 @@ footer::before {
   height: 25px;
   border-right: 1px solid var(--accent-color);
   border-top: 1px solid var(--accent-color);
-  position: absolute;
 }
 
 header::after,
@@ -49,7 +48,6 @@ footer::after {
   height: 25px;
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
-  position: absolute;
 }
 
 .decoration {
