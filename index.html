@@ -4,48 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
-    <link rel="icon" href="./images/favicon.ico" />
+    <meta name="color-scheme" content="dark light">
+    <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/dark.css" />
-    <link rel="stylesheet" href="./styles/light.css" />
+    <link rel="stylesheet" href="./styles/dark.css">
+    <link rel="stylesheet" href="./styles/light.css">
     <title>Сложно сосредоточиться</title>
     <script src="./scripts/script.js"></script>
   </head>
   <body class="page">
-    <header class="header">
-      <div class="container">
-        <p class="decoration">rec</p>
+    <header class="header decorated-zone">
+      <div class="header__nav-block-flex">
+        <div class="header__logo" ></div>
+        <div class="container _container-decorated" >
+          <p class="decoration">rec</p>
+        </div>
+        <nav class="header__theme-menu">
+          <ul class="header__theme-menu-list">
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_light">
+                День
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+                disabled>
+                Авто
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_dark">
+                Неон
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="header__theme-menu">
-        <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              Неон
-            </button>
-          </li>
-        </ul>
-      </nav>
       <h1 class="header__title">no focus</h1>
       <h3 class="block__title">
         Что делать, когда не можешь делать ничего <br />Или почему нам так
@@ -53,6 +53,7 @@
       </h3>
     </header>
     <main>
+
       <!-- first section -->
 
       <section class="section section__focus">
@@ -86,7 +87,7 @@
           </div>
         </div>
       </section>
-
+      
       <!-- second section -->
 
       <section class="section section__concentration">
@@ -211,44 +212,41 @@
         <h3 class="section__block-title">А можно в картинках?</h3>
         <div class="section__images-gallery">
           <img
-            class="image sunset"
+            class="section__image-firstItem  topic__image"
             src="./images/sunset.png"
             alt="sunset"
             loading="lazy"
           />
           <img
-            class="image ice-cream"
+            class="section__image-secondItem topic__image" 
             src="./images/ice-cream.png"
             alt="ice-cream"
             loading="lazy"
           />
           <img
-            class="image tape"
+            class="section__image-thirdItem topic__image"
             src="./images/tape.png"
             alt="tape"
             loading="lazy"
           />
+
           <img
-            class="image books"
+            class="section__image-fourthItem topic__image"
             src="./images/books.png"
             alt="books"
             loading="lazy"
           />
           <img
-            class="image street"
+            class="section__image-fifthItem topic__image"
             src="./images/street.png"
             alt="street"
             loading="lazy"
           />
         </div>
-      </section>
+      </section> 
     </main>
 
     <footer class="footer">
-      <!-- <div class="container">
-        <div class="footer__border-wrap-top"></div>
-        <div class="footer__border-wrap-bottom"></div>
-      </div> -->
       <h2 class="footer__title">focus</h2>
     </footer>
   </body>
