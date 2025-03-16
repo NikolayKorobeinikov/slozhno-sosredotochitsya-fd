@@ -28,6 +28,7 @@
 
 /* HEADER */
 .header {
+  height: 100vh;
   position: relative;
   display: grid;
   grid-template-columns: 100%;
@@ -62,7 +63,6 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  align-items: end;
   height: 173px;
 }
 @media (min-width: 375px) {
@@ -443,6 +443,7 @@
 /* FOOTER  */
 
 .footer {
+  height: 100vh;
   position: relative;
   height: 668px;
   display: flex;
