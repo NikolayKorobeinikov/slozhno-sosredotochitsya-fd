@@ -4,13 +4,13 @@
   переключая тему
 */
 
+
 /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
 
-:root.theme-dark,
-:root {
+:root.theme-dark{
   --background-image: url(../images/cover-image-dark.png);
   --background-color: rgba(0, 0, 40, 1);
   --text-color: rgba(241, 178, 206, 1);
@@ -20,39 +20,84 @@
   --text-shadow: 4px 4px 0 var(--accent-color);
 }
 
+
 /* Вам также нужно будет написать ряд подобных селекторов */
 
 /* .theme-dark .page {
   background-color: var(--background-color), rgba(0, 0, 40, 1);
 } */
 
-header::before,
-footer::before {
+
+header::before, footer::before{
   content: "";
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 0px;
   width: 25px;
   height: 25px;
-  border-right: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
+  border-right: 1px  solid var(--accent-color);
+  border-top: 1px  solid var(--accent-color);
+  position: absolute;
 }
 
-header::after,
-footer::after {
+@media ( min-width: 768px ){
+  header::before{
+    top: 20px;
+    right: 10px;
+  }
+}
+
+@media ( min-width: 1024px ){
+  header::before{
+
+    
+  }
+}
+
+
+header::after{
   content: "";
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: -3px;
+  left: 0px;
   width: 25px;
   height: 25px;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px  solid var(--accent-color);
+  border-bottom: 1px  solid var(--accent-color);
+  position: absolute;
 }
+
+footer::after{
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 1px;
+  width: 25px;
+  height: 25px;
+  border-left: 1px  solid var(--accent-color);
+  border-bottom: 1px  solid var(--accent-color);
+  position: absolute;
+}
+
+
 
 .decoration {
   color: var(--accent-color);
 }
+@media ( min-width: 375px ){
+  .decoration{
+    padding-top: 20px;
+  }
+}
+
+@media ( min-width: 1024px ){
+  .decoration{
+  padding-top: 0px;
+    
+  }
+}
+
+
 
 .decoration::after {
   content: "";
@@ -60,21 +105,19 @@ footer::after {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  margin-left: 10px;
+  margin-left: 5px;
   vertical-align: middle;
   background-color: var(--accent-color);
   box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
 
-.header__theme-menu-button {
+.header__theme-menu-button{
   border: 1px solid var(--background-color);
-}
+  }
 
-.header__theme-menu-button:hover,
-.header__theme-menu-button:focus,
-.header__theme-menu-button:active {
-  border: 1px solid var(--accent-color);
-}
+  .header__theme-menu-button:hover, .header__theme-menu-button:focus, .header__theme-menu-button:active{
+    border: 1px solid var(--accent-color);
+    }
 
 .header__title {
   /* text-shadow: var(--accent-color); */
