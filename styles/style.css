@@ -71,6 +71,7 @@ body {
   height: 173px;
   width: calc(100% - 10px);
 }
+
 @media (min-width: 375px) {
   .header__nav-block-flex {
     flex-direction: column;
