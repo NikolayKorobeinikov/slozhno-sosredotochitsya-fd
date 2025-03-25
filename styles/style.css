@@ -33,6 +33,7 @@ body {
 
 /* HEADER  ================================================================*/
 .header {
+  height: 100vh;
   position: relative;
   display: grid;
   grid-template-columns: 100%;
