@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light){
+@media (prefers-color-scheme: light) {
   :root {
     --background-image: url(../images/cover-image-light.png);
     --background-color: rgba(255, 241, 247, 1);
