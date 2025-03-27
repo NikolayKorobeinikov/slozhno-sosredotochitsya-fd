@@ -8,6 +8,7 @@
 }
 
 .header {
+  background-image: var(--background-image);
   position: relative;
   height: 100vh;
   display: grid;
@@ -15,7 +16,6 @@
   grid-auto-rows: 1fr;
   justify-items: center;
   align-items: center;
-  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
