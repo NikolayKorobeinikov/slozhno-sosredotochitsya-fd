@@ -8,31 +8,46 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-image: url(../images/cover-image-dark.png);
-    --background-color: rgba(0, 0, 40, 1);
-    --main-text-color: rgba(241, 178, 206, 1);
-    --hover-button-color: var(rgba(255, 0, 112, 0.4));
-    --hover-color: var(--main-text-color);
-    --focus-color: var(--main-text-color);
-    --heading-color: rgba(0, 0, 40, 1);
-    --highlighted-title-color: rgba(219, 0, 255, 1);
-    --accent-color: rgba(255, 0, 112, 1);
-    --border-color: var(--accent-color);
-    --text-color: var(--accent-color);
-    --text-shadow-header: 4px 4px 0 var(--accent-color);
-    --text-shadow-footer: 2px 2px 0 var(--accent-color);
-  }
+:root {
+  --background-image: url(../images/cover-image-dark.png);
+  --background-color: rgba(0, 0, 40, 1);
+  --main-text-color: rgba(241, 178, 206, 1);
+  --hover-button-color: var(rgba(255, 0, 112, 0.4));
+  --hover-color: var(--main-text-color);
+  --focus-color: var(--main-text-color);
+  --heading-color: rgba(0, 0, 40, 1);
+  --highlighted-title-color: rgba(219, 0, 255, 1);
+  --accent-color: rgba(255, 0, 112, 1);
+  --border-color: var(--accent-color);
+  --text-color: var(--accent-color);
+  --text-shadow-header: 4px 4px 0 var(--accent-color);
+  --text-shadow-footer: 2px 2px 0 var(--accent-color);
+}
 
-  .theme-dark .page {
-    background-color: var(--background-color);
-  }
+:root.theme-dark {
+  --background-image: url(../images/cover-image-dark.png);
+  --background-color: rgba(0, 0, 40, 1);
+  --main-text-color: rgba(241, 178, 206, 1);
+  --hover-button-color: var(rgba(255, 0, 112, 0.4));
+  --hover-color: var(--main-text-color);
+  --focus-color: var(--main-text-color);
+  --heading-color: rgba(0, 0, 40, 1);
+  --highlighted-title-color: rgba(219, 0, 255, 1);
+  --accent-color: rgba(255, 0, 112, 1);
+  --border-color: var(--accent-color);
+  --text-color: var(--accent-color);
+  --text-shadow-header: 4px 4px 0 var(--accent-color);
+  --text-shadow-footer: 2px 2px 0 var(--accent-color);
+}
 
-  .theme-dark .header {
-    background-image: var(--background-image);
-  }
+.theme-dark .page {
+  background-color: var(--background-color);
+}
 
+.theme-dark .header {
+  background-image: var(--background-image);
+}
+@media (prefers-color-scheme: dark) {
   header::before,
   footer::before {
     border-right: 1px solid var(--accent-color);
