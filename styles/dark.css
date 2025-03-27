@@ -12,104 +12,76 @@
 :root.theme-dark {
   --background-image: url(../images/cover-image-dark.png);
   --background-color: rgba(0, 0, 40, 1);
-  --text-color: rgba(241, 178, 206, 1);
+  --main-text-color: rgba(241, 178, 206, 1);
+  --hover-button-color: var(rgba(255, 0, 112, 0.4));
+  --hover-color: var(--main-text-color);
+  --focus-color: var(--main-text-color);
   --heading-color: rgba(0, 0, 40, 1);
   --highlighted-title-color: rgba(219, 0, 255, 1);
   --accent-color: rgba(255, 0, 112, 1);
+  --border-color: var(--accent-color);
+  --text-color: var(--accent-color);
   --text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-/* Вам также нужно будет написать ряд подобных селекторов */
-
-/* .theme-dark .page {
-  background-color: var(--background-color), rgba(0, 0, 40, 1);
-} */
+.theme-dark .page {
+  background-color: var(--background-color);
+}
 
 header::before,
 footer::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  right: 0px;
-  width: 25px;
-  height: 25px;
   border-right: 1px solid var(--accent-color);
   border-top: 1px solid var(--accent-color);
 }
 
-@media (min-width: 768px) {
-  header::before {
-    top: 20px;
-    right: 10px;
-  }
-}
-
-/* @media (min-width: 1024px) {
-  header::before {
-  }
-} */
-
-header::after {
-  content: "";
-  bottom: -3px;
-  left: 0px;
-  width: 25px;
-  height: 25px;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
-  position: absolute;
-}
-
+header::after,
 footer::after {
-  content: "";
-  bottom: 10px;
-  left: 1px;
-  width: 25px;
-  height: 25px;
   border-left: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
-  position: absolute;
 }
 
 .decoration {
-  color: var(--accent-color);
-}
-@media (min-width: 375px) {
-  .decoration {
-    padding-top: 20px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .decoration {
-    padding-top: 0px;
-  }
+  display: block;
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 38px;
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  font-weight: var(--fw-normal);
+  text-transform: var(--text-uppercase);
+  line-height: 25px;
+  color: var(--text-color);
 }
 
 .decoration::after {
+  position: absolute;
   content: "";
-  display: inline-block;
+  top: 10px;
+  right: -19px;
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  margin-left: 5px;
-  vertical-align: middle;
   background-color: var(--accent-color);
   box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
 
+.header__theme-menu-item,
 .header__theme-menu-button {
-  border: 1px solid var(--background-color);
+  color: var(--text-color);
 }
 
-.header__theme-menu-button:hover,
-.header__theme-menu-button:focus,
-.header__theme-menu-button:active {
-  border: 1px solid var(--accent-color);
+.header__theme-menu-button_active {
+  border: 1px solid var(--border-color);
+  padding: 1.5px 13px;
 }
 
-.header__title {
-  /* text-shadow: var(--accent-color); */
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-button-color);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .block__title {
@@ -118,14 +90,39 @@ footer::after {
 }
 
 .section__title {
-  color: var(--accent-color);
+  color: var(--text-color);
 }
 
 .section__block-title {
-  background-color: var(--accent-color);
   color: var(--heading-color);
+  background-color: var(--accent-color);
+}
+.section__block-text {
+  color: var(--main-text-color);
 }
 
-.section__block-text {
-  color: var(--text-color);
+.link {
+  text-shadow: var(--text-shadow);
 }
+
+.link:hover {
+  border-bottom: 1px solid var(--hover-color);
+}
+
+.link:focus {
+  border: 1px solid var(--hover-color);
+}
+
+@media (min-width: 768px) {
+  .decoration {
+    top: 20px;
+    right: 48px;
+  }
+}
+
+/* @media (min-width: 1024px) {
+  .decoration {
+    top: 20px;
+    right: 48px;
+  }
+} */

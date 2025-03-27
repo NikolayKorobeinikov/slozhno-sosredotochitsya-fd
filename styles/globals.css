@@ -1,19 +1,26 @@
 /* Глобальные стили для проекта, их можно дополнять и менять по желанию */
 
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 *,
 *::before,
 *::after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
-  margin: 0 auto;
+  min-height: 100vh;
+  margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 h1,
@@ -32,8 +39,6 @@ fieldset {
 
 ul,
 ol {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -48,6 +53,16 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {

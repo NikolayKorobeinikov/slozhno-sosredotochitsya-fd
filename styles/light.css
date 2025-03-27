@@ -1,117 +1,60 @@
 @media (prefers-color-scheme: light) {
-  /*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-  :root.theme-light,
-  :root {
+  :root.theme-light {
     --background-image: url(../images/cover-image-light.png);
     --background-color: rgba(255, 241, 247, 1);
+    --hover-button-color: rgba(50, 49, 45, 0.4);
+    --focus-button-color: var(--text-color);
     --text-color: rgba(53, 52, 48, 1);
-    --heading-color: rgba(53, 52, 48, 1);
+    --hover-color: var(--text-color);
+    --focus-color: var(--text-color);
+    --heading-color: var(--text-color);
     --accent-color: rgba(255, 141, 203, 1);
+    --border-color: var(--text-color);
     --highlighted-title-color: rgba(255, 194, 230, 1);
     --text-shadow: 4px 4px 0 var(--accent-color);
   }
 
-  /* Вам также нужно будет написать ряд подобных селекторов */
-
-  /* .theme-light .page {
-  background-color: var(--background-color), rgba(255, 241, 247, 1);
-} */
-
-  .header {
-    background-image: var(--background-image);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  .theme-light .page {
+    background-color: var(--background-color);
   }
 
-  .theme-light header::before,
-  .theme-light footer::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 0px;
-    width: 25px;
-    height: 25px;
-    border-right: 1px solid var(--text-color);
-    border-top: 1px solid var(--text-color);
+  header::before,
+  footer::before {
+    border-right: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
   }
 
-  @media (min-width: 768px) {
-    .theme-light header::before {
-      top: 20px;
-      right: 10px;
-    }
+  header::after,
+  footer::after {
+    border-left: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
   }
 
-  @media (min-width: 1024px) {
-    .theme-light header::before {
-      /* position: relative; */
-    }
+  .theme-light .decoration,
+  .theme-light .decoration::after {
+    display: none !important;
   }
 
-  .theme-light header::after {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0px;
-    height: 25px;
-    border-left: 1px solid var(--text-color);
-    border-bottom: 1px solid var(--text-color);
+  .header__theme-menu-item {
+    color: var(--text-color);
   }
 
-  @media (min-width: 768px) {
-    .theme-light header::after {
-      bottom: 0px;
-      left: 10px;
-    }
-  }
-
-  .theme-light footer::after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: 1px;
-    height: 25px;
-    border-left: 1px solid var(--text-color);
-    border-bottom: 1px solid var(--text-color);
-  }
-
-  .theme-light .decoration {
-    visibility: hidden;
-  }
-
-  .theme-light .header__theme-menu-button {
+  .header__theme-menu-button {
     border: 1px solid var(--background-color);
     color: var(--text-color);
   }
 
-  .theme-light .header__theme-menu-button:hover,
-  .header__theme-menu-button:focus,
-  .header__theme-menu-button:active {
-    border: 1px solid var(--text-color);
+  .header__theme-menu-button_active {
+    border: 1px solid var(--border-color);
+    padding: 1.5px 13px;
   }
 
-  .header__title {
-    /* text-shadow: var(--accent-color); */
+  .header__theme-menu-button:hover {
+    border: 1px solid var(--hover-button-color);
   }
-  @media (min-width: 768px) {
-    .header__title {
-      margin-left: -10px;
-    }
-  }
-  @media (min-width: 1024px) {
-    .header__title {
-      margin-top: 300px;
-    }
+
+  .header__theme-menu-button:focus {
+    border-bottom: 1px solid var(--focus-button-color);
   }
 
   .block__title {
@@ -119,16 +62,20 @@
     color: var(--heading-color);
   }
 
-  .theme-light .section__title {
-    color: var(--heading-color);
-  }
-
   .section__block-title {
+    color: var(--heading-color);
     background-color: var(--accent-color);
-    /* color: var(--heading-color); */
   }
 
-  .section__block-text {
-    color: var(--text-color);
+  .link {
+    text-shadow: var(--text-shadow);
+  }
+
+  .link:hover {
+    border-bottom: 1px solid var(--hover-color);
+  }
+
+  .link:focus {
+    border: 1px solid var(--hover-color);
   }
 }
