@@ -154,7 +154,6 @@ footer::after {
   line-height: 83%;
   text-transform: var(--text-lowercase);
   color: var(--highlighted-title-color);
-  /* text-shadow: var(--text-shadow-footer); */
 }
 
 /* @media 768px */
