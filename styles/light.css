@@ -11,7 +11,9 @@
     --accent-color: rgba(255, 141, 203, 1);
     --border-color: var(--text-color);
     --highlighted-title-color: rgba(255, 194, 230, 1);
-    --text-shadow: 4px 4px 0 var(--accent-color);
+    --text-shadow-header: 4px 4px 0 var(--accent-color);
+    --shadow-color: rgba(255, 0, 112, 1);
+    --text-shadow-footer: 2px 2px 0 var(--shadow-color);
   }
 
   .theme-light .page {
@@ -81,5 +83,9 @@
 
   .link:focus {
     border: 1px solid var(--hover-color);
+  }
+
+  .footer__title {
+    text-shadow: var(--text-shadow-footer);
   }
 }

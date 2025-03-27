@@ -76,7 +76,7 @@ footer::after {
   line-height: 83%;
   color: var(--highlighted-title-color);
   text-transform: var(--text-lowercase);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-shadow-header);
 }
 
 .block__title {
@@ -154,7 +154,7 @@ footer::after {
   line-height: 83%;
   text-transform: var(--text-lowercase);
   color: var(--highlighted-title-color);
-  text-shadow: var(--text-shadow);
+  /* text-shadow: var(--text-shadow-footer); */
 }
 
 /* @media 768px */

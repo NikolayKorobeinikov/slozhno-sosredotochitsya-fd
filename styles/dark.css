@@ -20,7 +20,9 @@
   --accent-color: rgba(255, 0, 112, 1);
   --border-color: var(--accent-color);
   --text-color: var(--accent-color);
-  --text-shadow: 4px 4px 0 var(--accent-color);
+  --text-shadow-header: 4px 4px 0 var(--accent-color);
+  --text-shadow-footer: 2px 2px 0 var(--accent-color);
+
 }
 
 .theme-dark .page {
@@ -114,6 +116,10 @@ footer::after {
 
 .link:focus {
   border: 1px solid var(--hover-color);
+}
+
+.footer__title {
+  text-shadow: var(--text-shadow-footer);
 }
 
 @media (min-width: 768px) {
