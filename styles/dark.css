@@ -1,146 +1,79 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
-/* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-:root {
-  --background-image: url(../images/cover-image-dark.png);
-  --background-color: rgba(0, 0, 40, 1);
-  --main-text-color: rgba(241, 178, 206, 1);
-  --hover-button-color: var(rgba(255, 0, 112, 0.4));
-  --hover-color: var(--main-text-color);
-  --focus-color: var(--main-text-color);
-  --heading-color: rgba(0, 0, 40, 1);
-  --highlighted-title-color: rgba(219, 0, 255, 1);
-  --accent-color: rgba(255, 0, 112, 1);
-  --border-color: var(--accent-color);
-  --text-color: var(--accent-color);
-  --text-shadow-header: 4px 4px 0 var(--accent-color);
-  --text-shadow-footer: 2px 2px 0 var(--accent-color);
-}
-
 :root.theme-dark {
   --background-image: url(../images/cover-image-dark.png);
   --background-color: rgba(0, 0, 40, 1);
   --main-text-color: rgba(241, 178, 206, 1);
-  --hover-button-color: var(rgba(255, 0, 112, 0.4));
-  --hover-color: var(--main-text-color);
-  --focus-color: var(--main-text-color);
+  --hover-button-color: rgba(255, 0, 112, 0.4);
+  --hover-color-link: var(--main-text-color);
+  --focus-button-color: var(--accent-color);
+  --focus-color-link: var(--main-text-color);
   --heading-color: rgba(0, 0, 40, 1);
-  --highlighted-title-color: rgba(219, 0, 255, 1);
+  --h1-color: rgba(219, 0, 255, 1);
   --accent-color: rgba(255, 0, 112, 1);
   --border-color: var(--accent-color);
-  --text-color: var(--accent-color);
+  --accent-text-color: var(--accent-color);
   --text-shadow-header: 4px 4px 0 var(--accent-color);
   --text-shadow-footer: 2px 2px 0 var(--accent-color);
+  --link-shadow: var(--text-shadow-header);
+  --footer-title: var(--h1-color);
 }
 
-.theme-dark .page {
-  background-color: var(--background-color);
+.decorated-zone::before {
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
 }
 
-.theme-dark .header {
-  background-image: var(--background-image);
+.decorated-zone::after {
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
 }
-@media (prefers-color-scheme: dark) {
-  header::before,
-  footer::before {
-    border-right: 1px solid var(--accent-color);
-    border-top: 1px solid var(--accent-color);
-  }
 
-  header::after,
-  footer::after {
-    border-left: 1px solid var(--accent-color);
-    border-bottom: 1px solid var(--accent-color);
-  }
+.theme-dark .decoration,
+.theme-dark .decoration::after {
+  display: block;
+}
 
+.header__theme-menu-item,
+.header__theme-menu-button,
+.section__title {
+  color: var(--accent-text-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--border-color);
+  padding: 1.5px 13px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-button-color);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.block__title {
+  background-color: var(--accent-color);
+}
+
+.block__title-text {
+  color: var(--heading-color);
+}
+
+.section__block-title {
+  color: var(--heading-color);
+  background-color: var(--accent-color);
+}
+.section__block-text {
+  color: var(--main-text-color);
+}
+
+.footer__title {
+  text-shadow: var(--text-shadow-footer);
+}
+
+@media (min-width: 768px) {
   .decoration {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 10px;
-    right: 38px;
-    font-family: var(--font-main);
-    font-size: var(--font-size-base);
-    font-weight: var(--fw-normal);
-    text-transform: var(--text-uppercase);
-    line-height: 25px;
-    color: var(--text-color);
-  }
-
-  .decoration::after {
-    position: absolute;
-    content: "";
-    top: 10px;
-    right: -19px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background-color: var(--accent-color);
-    box-shadow: 0px 0px 4px 2px var(--accent-color);
-  }
-
-  .header__theme-menu-item,
-  .header__theme-menu-button {
-    color: var(--text-color);
-  }
-
-  .header__theme-menu-button_active {
-    border: 1px solid var(--border-color);
-    padding: 1.5px 13px;
-  }
-
-  .header__theme-menu-button:hover {
-    border: 1px solid var(--hover-button-color);
-  }
-
-  .header__theme-menu-button:focus {
-    border-bottom: 1px solid var(--accent-color);
-  }
-
-  .block__title {
-    background-color: var(--accent-color);
-    color: var(--heading-color);
-  }
-
-  .section__title {
-    color: var(--text-color);
-  }
-
-  .section__block-title {
-    color: var(--heading-color);
-    background-color: var(--accent-color);
-  }
-  .section__block-text {
-    color: var(--main-text-color);
-  }
-
-  .link {
-    text-shadow: var(--text-shadow);
-  }
-
-  .link:hover {
-    border-bottom: 1px solid var(--hover-color);
-  }
-
-  .link:focus {
-    border: 1px solid var(--hover-color);
-  }
-
-  .footer__title {
-    text-shadow: var(--text-shadow-footer);
-  }
-
-  @media (min-width: 768px) {
-    .decoration {
-      top: 20px;
-      right: 48px;
-    }
+    top: 20px;
+    right: 48px;
   }
 }

@@ -1,53 +1,63 @@
+:root.theme-light {
+  --background-image: url(../images/cover-image-light.png);
+  --background-color: rgba(255, 241, 247, 1);
+  --main-text-color: rgba(53, 52, 48, 1);
+  --hover-button-color: rgba(50, 49, 45, 0.4);
+  --hover-color-link: var(--main-text-color);
+  --focus-button-color: var(--main-text-color);
+  --focus-color-link: var(--main-text-color);
+  --heading-color: var(--main-text-color);
+  --h1-color: rgba(255, 194, 230, 1);
+  --accent-color: rgba(255, 141, 203, 1);
+  --border-color: var(--main-text-color);
+  --accent-text-color: var(--main-text-color);
+  --text-shadow-header: 4px 4px 0 var(--accent-color);
+  --text-shadow-footer: 2px 2px 0 rgba(255, 0, 112, 1);
+  --link-shadow: var(--text-shadow-header);
+  --footer-title: var(--h1-color);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --background-image: url(../images/cover-image-light.png);
     --background-color: rgba(255, 241, 247, 1);
+    --main-text-color: rgba(53, 52, 48, 1);
     --hover-button-color: rgba(50, 49, 45, 0.4);
-    --focus-button-color: var(--text-color);
-    --text-color: rgba(53, 52, 48, 1);
-    --hover-color: var(--text-color);
-    --focus-color: var(--text-color);
-    --heading-color: var(--text-color);
+    --hover-color-link: var(--main-text-color);
+    --focus-button-color: var(--main-text-color);
+    --focus-color-link: var(--main-text-color);
+    --heading-color: var(--main-text-color);
+    --h1-color: rgba(255, 194, 230, 1);
     --accent-color: rgba(255, 141, 203, 1);
-    --border-color: var(--text-color);
-    --highlighted-title-color: rgba(255, 194, 230, 1);
+    --border-color: var(--main-text-color);
+    --accent-text-color: var(--main-text-color);
     --text-shadow-header: 4px 4px 0 var(--accent-color);
-    --shadow-color: rgba(255, 0, 112, 1);
-    --text-shadow-footer: 2px 2px 0 var(--shadow-color);
+    --text-shadow-footer: 2px 2px 0 rgba(255, 0, 112, 1);
+    --link-shadow: var(--text-shadow-header);
+    --footer-title: var(--h1-color);
   }
 
-  .theme-light .page {
-    background-color: var(--background-color);
-  }
-
-  .theme-light .header {
-    background-image: var(--background-image);
-  }
-
-  header::before,
-  footer::before {
+  .decorated-zone::before {
     border-right: 1px solid var(--border-color);
     border-top: 1px solid var(--border-color);
   }
 
-  header::after,
-  footer::after {
+  .decorated-zone::after {
     border-left: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
   }
-
-  .theme-light .decoration,
-  .theme-light .decoration::after {
-    display: none !important;
+  .decoration,
+  .decoration::after {
+    display: none;
   }
 
   .header__theme-menu-item {
-    color: var(--text-color);
+    color: var(--accent-text-color);
   }
 
   .header__theme-menu-button {
     border: 1px solid var(--background-color);
-    color: var(--text-color);
+    color: var(--accent-text-color);
   }
 
   .header__theme-menu-button_active {
@@ -65,24 +75,15 @@
 
   .block__title {
     background-color: var(--accent-color);
+  }
+
+  .block__title-text {
     color: var(--heading-color);
   }
 
   .section__block-title {
     color: var(--heading-color);
     background-color: var(--accent-color);
-  }
-
-  .link {
-    text-shadow: var(--text-shadow);
-  }
-
-  .link:hover {
-    border-bottom: 1px solid var(--hover-color);
-  }
-
-  .link:focus {
-    border: 1px solid var(--hover-color);
   }
 
   .footer__title {
