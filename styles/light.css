@@ -34,3 +34,15 @@
     --footer-title: var(--h1-color);
   }
 }
+
+.theme-light .decoration,
+.theme-light .decoration::after {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .decoration,
+  .decoration::after {
+    display: none;
+  }
+}

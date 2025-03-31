@@ -13,3 +13,8 @@
   --accent-text-color: var(--accent-color);
   --footer-title: var(--h1-color);
 }
+
+.theme-dark .decoration,
+.theme-dark .decoration::after {
+  display: block;
+}
