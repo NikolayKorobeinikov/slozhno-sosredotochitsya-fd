@@ -1,9 +1,7 @@
-/* Глобальные стили для проекта, их можно дополнять и менять по желанию */
-
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -15,12 +13,12 @@ html {
 }
 
 body {
-  min-inline-size: 375px;
-  max-inline-size: 1440px;
   min-height: 100vh;
   margin: 0;
   padding: 0;
   word-wrap: break-word;
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
 }
 
 h1,
@@ -61,8 +59,8 @@ a:focus {
 }
 
 button {
-  background: none;
   border: none;
+  background: none;
   cursor: pointer;
 }
 
@@ -71,8 +69,8 @@ a {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
   object-fit: cover;
 }
